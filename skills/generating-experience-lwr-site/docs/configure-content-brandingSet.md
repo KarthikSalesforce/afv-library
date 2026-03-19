@@ -60,10 +60,9 @@ The `content.json` file must contain:
   - Maximum length is **100 characters**.
   - Must be **unique** within the space's brandingSet content items.
 - `contentBody`: Include all `required` properties from `schemaDefinition`. 
-  - **MANDATORY TIP**:
-    1. **Seed**: Always call `execute_metadata_action` with `shouldIncludeExamples: true`. Copy the *entire* example object from `examplesOfContentType[0]` into `content.json`. **NEVER** start from a minimal stub.
-    2. **Recalculate (CRITICAL STOP)**: You MUST stop and perform explicit changes for dependent tokens BEFORE generating JSON.
-       - [] Refer to "Branding Property Patterns" for detailed calculations.
+  1. **Seed**: Always call `execute_metadata_action` with `shouldIncludeExamples: true`. Copy the *entire* example object from `examplesOfContentType[0]` into `content.json`. **NEVER** start from a minimal stub.
+  2. **Recalculate (CRITICAL STOP)**: You MUST stop and perform explicit changes for dependent tokens BEFORE generating JSON.
+    - [] Refer to "Branding Property Patterns" for detailed calculations.
 
   - `brandingSetType`: Represents whether the color palette is for the entire site or a specific section.
     - `APP`: The branding set applies to the entire site. There can be only one branding set of this type.
